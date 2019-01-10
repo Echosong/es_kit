@@ -1,0 +1,65 @@
+{
+  "button": [
+    {
+      "type": "view",
+      "name": "约驾商城",
+      "url": "https://html.honglajiao.net.cn/?"
+    },
+    {
+      "name": "在线服务",
+      "sub_button": [
+        {
+          "type": "click",
+          "name": "在线客服",
+          "key": "HLJ_SERVICE"
+        },
+        {
+          "type": "view",
+          "name": "会员中心",
+          "url": "https://html.honglajiao.net.cn/#/myPage"
+        },
+        {
+          "type": "view",
+          "name": "我的订单",
+          "url": "https://html.honglajiao.net.cn/?#/order/index"
+        },
+        {
+          "type": "view",
+          "name": "特价预约",
+          "url": "https://html.honglajiao.net.cn/?status=2#/order/index"
+        },
+        {
+          "type": "view",
+          "name": "年卡预约",
+          "url": "https://html.honglajiao.net.cn/?#/niankaList"
+        },
+        {
+          "type": "view",
+          "name": "实体卡激活",
+          "url": "https://html.honglajiao.net.cn/?#/jihuo"
+        }
+      ]
+    },
+
+    {
+      "name": "系统核销",
+      "sub_button": [
+            {
+              "type": "view",
+              "name": "用户待核销",
+              "url": "https://html.honglajiao.net.cn/?#/niankaList"
+            },
+            {
+              "type": "miniprogram",
+              "name": "商家核销",
+              "url": "http://mp.weixin.qq.com",
+              "appid": "wxe55961e3b75466fe",
+              "pagepath": "/pages/index/index"
+            }
+          ]
+        }
+    ]
+
+}
+
+10__iW47n7FYYLOx0RFcCVul0UPiAy10BbA6JId0sPxEk2U4a-hRnLURIVNqHBTgBlCEj9xwqSe9OogXT5LewPpxby6f2qrutyTdC0E3ta9zw9giO0qN6L31fZy7mTn_9dzmsJK8Zq-FcZTDpTrTLMiAAALDE

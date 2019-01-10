@@ -1,0 +1,10 @@
+/.idea 
+/.ida
+/logs
+/vendor
+/apidocs
+/src/config.php
+/src/config.php_b 
+/logs_bak 
+.idea 
+.DS_Store

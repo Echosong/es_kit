@@ -1,0 +1,36 @@
+/**
+ * @git https://gitee.com/okcoder
+ * @author OkCoder
+ * @QQ 1046512080
+ */
+
+.layui-fsonCheckBox {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.layui-fsonCheckBox-left {
+    border: 1px solid #C9C9C9;
+    padding: 10px 0;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.layui-fsonCheckBox-left > dd {
+    padding: 5px;
+}
+
+.layui-fsonCheckBox-right {
+    border: 1px solid #C9C9C9;
+    margin: 0;
+}
+
+.layui-fsonCheckBox-right .layui-tab-item dl {
+    overflow: hidden;
+}
+
+.layui-fsonCheckBox-right .layui-tab-item dl dd {
+    float: left;
+    margin: 5px;
+}

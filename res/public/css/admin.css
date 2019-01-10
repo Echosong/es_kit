@@ -1,0 +1,27 @@
+.layui-nav-tree .layui-nav-child dd {  padding: 0 0 0 30px;  font-size: 14px;  }
+/**强制无底**/
+.layui-layout-admin .layui-body {  bottom: 10px;  }
+a {color: #444;  text-decoration: none;  cursor:pointer;  }
+.layui-elem-quote {  padding: 10px;  }
+.layui-layout-admin .layui-main{margin:0 5px;}
+.layui-form{padding:25px 35px 10px 10px;}
+.layui-form-select dl dt{ font-size: 14px;font-weight: bold;}
+.layui-form-select dl{min-height: 30px;max-height: 200px;}
+#page{text-align: right;padding-right:1px;margin-bottom: 0px;}.tb_list{padding:0px;}
+.layui-form-pane{padding-top:8px;}
+.logo{ color: #c2c2c2; float: left; line-height:60px; font-size:16px;  text-align: center; }
+/* tree table */
+.my-tree-table-box .tree-table-tree-box {  width: 20%;  min-height: 200px;  display: inline-block;  vertical-align: top;  overflow-y: auto;  overflow-x: auto;  }
+.attr-tree{  width: 100%;  min-height: 200px;  display: inline-block;  vertical-align: top;  overflow-y: auto;  overflow-x: auto;  }
+.my-tree-table-box .tree-table-table-box {  display: inline-block;  vertical-align: top;  width: 78%;  margin-left: 1%;  }
+.layui-field-title{margin-bottom: 0px;}
+.my-btn-box {  height: 38px;  margin-bottom: 10px;  }
+.fl{float: left;}.fr{float: right;}.tl{text-align: left;padding-left: 0px;}.tr{text-align: right;}
+.layui-disabled{background:#EEEEEE;color:#595963 !important;}
+.layui-layer-btn .layui-layer-btn0{border-color:#009688 !important;background-color:#009688 !important;color:#fff}
+ .tl{float: left;box-sizing:border-box; width: 100%;}.tr{position: absolute; right:0px; width: auto;float: right;} .layui-layer-title{font-size: 25px;font-weight: bold; }
+.layui-btn+.layui-btn{margin-left: 0px;}.layui-form-pane .layui-form-label{width: auto}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{background-color:transparent;}
+.layui-nav .t_slide a{padding: 0px;}
+.layui-nav .t_slide li{width:100%;}
+.ml1{margin-left:10px;}.mr1{margin-right:10px;}
