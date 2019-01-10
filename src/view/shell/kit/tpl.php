@@ -37,6 +37,10 @@
             <button class="layui-btn" name="0" lay-submit lay-filter="btnSubmit">生成列表</button>
             <button class="layui-btn" name="1" lay-submit lay-filter="btnSubmit">生成表单</button>
         </div>
+        <pre class="layui-code">
+        //代码区域
+        var a = 'hello layui';
+        </pre>
         <pre><code style="width: 1200px;height: 800px" id="layui-code-info" class="layui-form-text " > 显示代码区域 </code></pre>
 </form>
 <script>
@@ -54,7 +58,6 @@
             }, 'json');
             return false;
         });
-
     });
 </script>
 </body>
