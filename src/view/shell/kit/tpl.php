@@ -14,7 +14,16 @@
     <link rel="stylesheet" href="<?= APP_ROOT . $GLOBALS['static'] ?>/public/layui/css/layui.css">
     <link rel="stylesheet" href="<?= APP_ROOT . $GLOBALS['static'] ?>/public/css/admin.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs.min.css">
-
+    <style>
+        .copycode {
+            position: absolute;
+            top:100px;
+            left: 1180px;
+            z-index: 10000;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
 
 </head>
 <body style="margin-left: 50px">
@@ -37,30 +46,40 @@
             <button class="layui-btn" name="0" lay-submit lay-filter="btnSubmit">生成列表</button>
             <button class="layui-btn" name="1" lay-submit lay-filter="btnSubmit">生成表单</button>
         </div>
-        <pre class="layui-code">
-        //代码区域
-        var a = 'hello layui';
-        </pre>
-        <pre><code style="width: 1200px;height: 800px" id="layui-code-info" class="layui-form-text " > 显示代码区域 </code></pre>
+        <div class="copycode"><img title="切换显示方式" src="/res/public/img/copycode.gif"> </div>
+        <pre><code style="width: 1200px;height: 800px" id="layui-code-info" class="layui-form-text " >  </code></pre>
+        <textarea style="display: none; width: 1200px;height: 800px;" id="textarea-info"  class="layui-form-text " ></textarea>
 </form>
 <script>
     //Demo
     layui.use(['form', 'code'], function () {
         var form = layui.form, $ = layui.jquery;
-        layui.code(); //引用code方法
+        layer = layui.layer
         form.on('submit(btnSubmit)', function (data) {
             var type = data.elem.name;
+            layui.code({
+                title: 'PHP'
+            });
             $.post('<?=Helper::url('kit', 'tpl')?>', {type: type, table: data.field.table}, function (msg) {
-                $("#textareaCode textarea").text(msg.message);
+                $("#textarea-info").text(msg.message);
+                $("#layui-code-info").show();
+                $("#textarea-info").hide();
+                $(".copycode").show();
                 $("#layui-code-info").text(msg.message).each(function (i, block) {
                     hljs.highlightBlock(block);
                 });
             }, 'json');
             return false;
         });
+        
+        $(".copycode").click(function () {
+            $("#layui-code-info").toggle();
+            $("#textarea-info").toggle();
+        })
     });
 </script>
 </body>
+
 
 </html>
 
