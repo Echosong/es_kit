@@ -159,7 +159,7 @@ class KitController extends BaseController
         $db = new Model();
         $tableComments = $db->query("select TABLE_COMMENT from INFORMATION_SCHEMA.tables where table_name='{$table}'  ");
         $this->tableComment = $tableComments[0]['TABLE_COMMENT'];
-        $columns = $db->query("select COLUMN_NAME as `Field`, COLUMN_TYPE as `Type`, COLUMN_COMMENT as `comment` from INFORMATION_SCHEMA.Columns where table_name='{$table}' ");
+        $columns = $db->query("select COLUMN_NAME as `Field`, COLUMN_TYPE as `Type`, COLUMN_COMMENT as `comment` from INFORMATION_SCHEMA.Columns where table_name='{$table}'   AND TABLE_SCHEMA='{$this->_db_name}' ");
         $fields = [];
         foreach ($columns as $field) {
             array_push($fields, $field['Field']);
@@ -237,7 +237,9 @@ class KitController extends BaseController
     {
         $db = new Model();
         $this->columns =$this->rulesLay($db->query("select COLUMN_NAME as `Field`, COLUMN_TYPE as `Type`,
-       COLUMN_COMMENT as `comment`, CHARACTER_MAXIMUM_LENGTH as charmax  from INFORMATION_SCHEMA.Columns where table_name='{$table}'"));
+       COLUMN_COMMENT as `comment`, CHARACTER_MAXIMUM_LENGTH as charmax  from INFORMATION_SCHEMA.Columns where table_name='{$table}' 
+          AND TABLE_SCHEMA='{$this->_db_name}'
+        "));
         $this->table = $this->getTableName($table);
         $returnVal = $this->display("kit/{$pageType}.php", true);
         return $this->filterTag($returnVal);
