@@ -184,11 +184,12 @@ Class Helper
      */
     public static function log($errMsg, $level = 'info')
     {
-          if(!is_string($errMsg)){
+       if(!is_string($errMsg)){
             $errMsg = json_encode($errMsg);
         }
         //shell 的操作权限跟web不一样，所以需要区分
-        $level = (isset($_REQUEST['m'])?$_REQUEST['m']:'').$level;
+        $logPath = APP_DIR . DS . $GLOBALS['logPath'] . DS . $level .
+            "_".(isset($_REQUEST['m'])?$_REQUEST['m']:''). date('Ymd') . ".log";
         $logPath = APP_DIR . DS . $GLOBALS['logPath'] . DS . $level . "_" . date('Ymd') . ".log";
         error_log(date('Ymd H:i:s') . "  " . $errMsg . PHP_EOL, 3, $logPath);
         if (strtolower(trim($level)) === 'fatal_error') {
